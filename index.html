@@ -60,8 +60,7 @@
         <br><a class="font-bold font-white link" id="email" href="mailto:info@infinitycrown.ca"
             target="_blank">info@infinitycrown.ca</a>
         <br><a class="font-bold font-white link" id="business">business identification number (BIN): 1000529479</a>
-        <br><a><img src="assets/canada.png" onclick="toggleLanguage('en')"></a> <a><img onclick="toggleLanguage('no')"
-                src="assets/no.png"></a>
+        <br><a href="https://infinitycrown.ca"><img src="assets/canada.png" style="cursor: pointer;"></a> <a href="https://infinitycrown.no"><img src="assets/no.png" style="cursor: pointer;"></a>
     </div>
     <div class="font-left-bottom animated fadeInUp no-select">
         <a class="font-bold font-white subtext" href="privacy-policy/" target="_blank">privacy</a>
@@ -91,11 +90,11 @@
     <script src="assets/js/video.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
-        // Auto-detect domain and set language
-        const domain = window.location.hostname;
-        const language = domain.includes('.no') ? 'no' : 'en';
-        toggleLanguage(language);
-        function toggleLanguage(language) {
+        // NOR Site - Default to Norwegian
+        const language = 'no';
+        displayContent(language);
+        
+        function displayContent(language) {
             const languageData = {
                 "no": {
                     "business": "organisasjonsnummer: 928 593 215",
